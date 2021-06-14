@@ -1,7 +1,7 @@
 from my_commands.imports import *
 
 mapping = {
-    "palette": Key("cs-a"),
+    "palette": Key("ws-a"),
     "please <paletteaction>": Key("ws-a") + Text("%(paletteaction)s"),
     "files": Key("ws-o"),
     "last": Key("c-tab"),
@@ -46,7 +46,7 @@ mapping = {
 extras = [Dictation("paletteaction")]
 
 Breathe.add_commands(
-    context=None,
+    context=AppContext(executable="idea"),
     mapping=mapping,
     extras=extras,
 )

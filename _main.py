@@ -6,13 +6,23 @@ from my_commands.imports import *
 modules = {
     "my_commands": {
         "apps": [
+            "1password",
+            "browsers",
+            "global_control",
             "intellij",
+            "mac_speech",
+            "music",
+            "outlook",
+            "terminal"
         ],
         "core": [
-            "keys",
             "alphabet",
+            "repeat",
         ],
-        "languages": [],
+        "languages": [
+            "python",
+            "terraform",
+        ],
     }
 }
 
