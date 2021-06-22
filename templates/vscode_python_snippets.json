@@ -1,0 +1,159 @@
+{
+    "import": {
+        "prefix": "qimportmod",
+        "body": [
+            "import $1",
+            "$0"
+        ],
+        "description": "Regular import statement"
+    },
+    "import_as": {
+        "prefix": "qimportas",
+        "body": [
+            "import $1 as $2",
+            "$0"
+        ],
+        "description": "Import as statement"
+    },
+    "from_import": {
+        "prefix": "qfromimport",
+        "body": [
+            "from $1 import $2",
+            "$0"
+        ],
+        "description": "From import statement"
+    },
+    "class": {
+        "prefix": "qclass",
+        "body": [
+            "class $1:",
+            "\t$0"
+        ],
+        "description": "Class statement"
+    },
+    "method": {
+        "prefix": "qmethod",
+        "body": [
+            "def $1($2):",
+            "\t$0"
+        ],
+        "description": "Method statement"
+    },
+    "private_method": {
+        "prefix": "qprivatemethod",
+        "body": [
+            "def _$1($2):",
+            "\t$0"
+        ],
+        "description": "Private method statement"
+    },
+    "doc_string": {
+        "prefix": "qdocstring",
+        "body": [
+            "\"\"\"$0\"\"\""
+        ],
+        "description": "Doc string statement"
+    },
+    "if": {
+        "prefix": "qif",
+        "body": [
+            "if $1:",
+            "\t$0"
+        ],
+        "description": "If statement"
+    },
+    "else_if": {
+        "prefix": "qelif",
+        "body": [
+            "elif $1:",
+            "\t$0"
+        ],
+        "description": "Else if statement"
+    },
+    "else": {
+        "prefix": "qelse",
+        "body": [
+            "else $1:",
+            "\t$0"
+        ],
+        "description": "Else statement"
+    },
+    "try": {
+        "prefix": "qtry",
+        "body": [
+            "try:",
+            "\t$0"
+        ],
+        "description": "Try statement"
+    },
+    "except": {
+        "prefix": "qcatch",
+        "body": [
+            "except:",
+            "\t$0"
+        ],
+        "description": "Except statement"
+    },
+    "except_as": {
+        "prefix": "qexceptas",
+        "body": [
+            "except $1 as $2:",
+            "\t$0"
+        ],
+        "description": "Except as statement"
+    },
+    "finally": {
+        "prefix": "qfinally",
+        "body": [
+            "finally:",
+            "\t$0"
+        ],
+        "description": "Finally statement"
+    },
+    "for": {
+        "prefix": "qfor",
+        "body": [
+            "for $1 in $2:",
+            "\t$0"
+        ],
+        "description": "For statement"
+    },
+    "while": {
+        "prefix": "qwhile",
+        "body": [
+            "while $1:",
+            "\t$0"
+        ],
+        "description": "While statement"
+    },
+    "with": {
+        "prefix": "qwith",
+        "body": [
+            "with $1 as $2:",
+            "\t$0"
+        ],
+        "description": "With statement"
+    },
+    "with_open": {
+        "prefix": "qopenwith",
+        "body": [
+            "with open($1, \"$2\") as $3:",
+            "\t$0"
+        ],
+        "description": "With open statement"
+    },
+    "format_string": {
+        "prefix": "qfstring",
+        "body": [
+            "f\"$0\""
+        ],
+        "description": "Format string statement"
+    },
+    "list_comprehension": {
+        "prefix": "qlistcomp",
+        "body": [
+            "[$1 for $2 in $3]$0"
+        ],
+        "description": "List comprehension statement"
+    }
+}
