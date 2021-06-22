@@ -1,6 +1,8 @@
 from my_commands.imports import *
 
 mapping = {
+    "arrange windows": Key("ws-a"),
+    "close windows": Key("ws-w"),
     "tab next": Key("ws-]"),
     "tab last": Key("ws-["),
     "tab new": Key("w-t"),
@@ -29,8 +31,7 @@ mapping = {
     "keep alive": Text("while true ; do date; sleep 15; done") + Key("enter"),
     "pie test": Text("pytest") + Key("enter"),
     "pip install": Text("pip install "),
-    "pip install requirements": Text("pip install -r requirements.txt")
-                                + Key("enter"),
+    "pip install requirements": Text("pip install -r requirements.txt") + Key("enter"),
     "pip list": Text("pip list") + Key("enter"),
     "vim save": Text(":w") + Key("enter"),
     "vim quit": Text(":wq") + Key("enter"),

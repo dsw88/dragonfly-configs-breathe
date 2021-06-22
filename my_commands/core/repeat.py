@@ -18,6 +18,7 @@ def repeat_command(count):
         for n in range(count):
             last_command.execute()
 
+
 mapping = {
     "repeat <count>": Function(repeat_command),
 }

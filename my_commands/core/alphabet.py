@@ -205,7 +205,9 @@ modifiers = {
 modifier_keys = {**alphabet, **other_keys, **number_keys}
 for modifier_command, modifier_code in modifiers.items():
     mapping = {
-        f"{modifier_command} {modifier_key}": Key(f"{modifier_code}-{modifier_keys[modifier_key]}")
+        f"{modifier_command} {modifier_key}": Key(
+            f"{modifier_code}-{modifier_keys[modifier_key]}"
+        )
         for modifier_key in modifier_keys
     }
     Breathe.add_commands(

@@ -1,4 +1,5 @@
 import logging
+
 logging.basicConfig()
 
 from my_commands.imports import *
@@ -13,7 +14,8 @@ modules = {
             "mac_speech",
             "music",
             "outlook",
-            "terminal"
+            "terminal",
+            "vscode",
         ],
         "core": [
             "alphabet",
