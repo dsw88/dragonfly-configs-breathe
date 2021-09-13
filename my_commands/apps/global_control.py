@@ -38,6 +38,8 @@ mapping = {
     "program close": Key("w-q"),
     "computer lock": Key("cw-q"),
     "spotlight": Key("w-space"),
+    "zoom in": Key("w-+"),
+    "zoom out": Key("w-hyphen"),
 }
 extras = [
     Choice(

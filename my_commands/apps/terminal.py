@@ -1,7 +1,6 @@
 from my_commands.imports import *
 
 mapping = {
-    "arrange windows": Key("ws-a"),
     "close windows": Key("ws-w"),
     "tab next": Key("ws-]"),
     "tab last": Key("ws-["),

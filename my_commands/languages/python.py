@@ -1,6 +1,7 @@
 from my_commands.imports import *
 from .intellij_support import invoke_live_template, run_action
-from .vscode_support import invoke_snippet, run_vscode_action
+from .vscode_support import invoke_snippet
+from .vim_support import invoke_neosnippets
 
 mapping = {
     "pass": Text("pass"),
@@ -88,11 +89,37 @@ vscode_mapping = {
     "fix imports": Function(run_action, action_name="Organize Imports"),
 }
 
+vim_mapping = {
+    "import": Function(invoke_snippet, template_name="qimportmod"),
+    "import as": Function(invoke_live_template, template_name="qimportas"),
+    "from import": Function(invoke_live_template, template_name="qfromimport"),
+    "class": Function(invoke_live_template, template_name="qclass"),
+    "method": Function(invoke_live_template, template_name="qmethod"),
+    "private method": Function(invoke_live_template, template_name="qprivatemethod"),
+    "dock string": Function(invoke_live_template, template_name="qdocstring"),
+    "if": Function(invoke_neosnippets, template_name="qif"),
+    "ell if": Function(invoke_live_template, template_name="qelif"),
+    "else": Function(invoke_live_template, template_name="qelse"),
+    "try": Function(invoke_live_template, template_name="qtry"),
+    "(except | catch)": Function(invoke_live_template, template_name="qcatch"),
+    "except as": Function(invoke_live_template, template_name="qexceptas"),
+    "finally": Function(invoke_live_template, template_name="qfinally"),
+    "for loop": Function(invoke_live_template, template_name="qfor"),
+    "while": Function(invoke_live_template, template_name="qwhile"),
+    "with": Function(invoke_live_template, template_name="qwith"),
+    "with open": Function(invoke_live_template, template_name="qopenwith"),
+    "format string": Function(invoke_live_template, template_name="qfstring"),
+    "list comprehension": Function(invoke_live_template, template_name="qlistcomp"),
+    # # IntelliJ Actions
+    "fix imports": Function(run_action, action_name="Organize Imports"),
+}
+
 extras = []
 context = AppContext(title=".py") | CommandContext("python")
 intellij_context = AppContext(executable="idea")
 vscode_context = AppContext(executable="electron")
 # TODO - Figure out how to scope this to just code
+vim_context = AppContext(executable="iTerm2")
 
 Breathe.add_commands(
     context=context,
@@ -109,3 +136,9 @@ Breathe.add_commands(
 Breathe.add_commands(
     context=context & vscode_context, mapping=vscode_mapping, extras=extras
 )
+
+# Vim-specific mappings
+Breathe.add_commands(
+    context=context & vim_context, mapping=vim_mapping, extras=extras
+)
+
