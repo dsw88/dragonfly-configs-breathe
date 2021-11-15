@@ -66,52 +66,48 @@ intellij_mapping = {
 
 vscode_mapping = {
     "import": Function(invoke_snippet, template_name="qimportmod"),
-    "import as": Function(invoke_live_template, template_name="qimportas"),
-    "from import": Function(invoke_live_template, template_name="qfromimport"),
-    "class": Function(invoke_live_template, template_name="qclass"),
-    "method": Function(invoke_live_template, template_name="qmethod"),
-    "private method": Function(invoke_live_template, template_name="qprivatemethod"),
-    "dock string": Function(invoke_live_template, template_name="qdocstring"),
-    "if": Function(invoke_live_template, template_name="qif"),
-    "ell if": Function(invoke_live_template, template_name="qelif"),
-    "else": Function(invoke_live_template, template_name="qelse"),
-    "try": Function(invoke_live_template, template_name="qtry"),
-    "(except | catch)": Function(invoke_live_template, template_name="qcatch"),
-    "except as": Function(invoke_live_template, template_name="qexceptas"),
-    "finally": Function(invoke_live_template, template_name="qfinally"),
-    "for loop": Function(invoke_live_template, template_name="qfor"),
-    "while": Function(invoke_live_template, template_name="qwhile"),
-    "with": Function(invoke_live_template, template_name="qwith"),
-    "with open": Function(invoke_live_template, template_name="qopenwith"),
-    "format string": Function(invoke_live_template, template_name="qfstring"),
-    "list comprehension": Function(invoke_live_template, template_name="qlistcomp"),
-    # # IntelliJ Actions
-    "fix imports": Function(run_action, action_name="Organize Imports"),
+    "import as": Function(invoke_snippet, template_name="qimportas"),
+    "from import": Function(invoke_snippet, template_name="qfromimport"),
+    "class": Function(invoke_snippet, template_name="qclass"),
+    "method": Function(invoke_snippet, template_name="qmethod"),
+    "private method": Function(invoke_snippet, template_name="qprivatemethod"),
+    "dock string": Function(invoke_snippet, template_name="qdocstring"),
+    "if": Function(invoke_snippet, template_name="qif"),
+    "ell if": Function(invoke_snippet, template_name="qelif"),
+    "else": Function(invoke_snippet, template_name="qelse"),
+    "try": Function(invoke_snippet, template_name="qtry"),
+    "(except | catch)": Function(invoke_snippet, template_name="qcatch"),
+    "except as": Function(invoke_snippet, template_name="qexceptas"),
+    "finally": Function(invoke_snippet, template_name="qfinally"),
+    "for loop": Function(invoke_snippet, template_name="qfor"),
+    "while": Function(invoke_snippet, template_name="qwhile"),
+    "with": Function(invoke_snippet, template_name="qwith"),
+    "with open": Function(invoke_snippet, template_name="qopenwith"),
+    "format string": Function(invoke_snippet, template_name="qfstring"),
+    "list comprehension": Function(invoke_snippet, template_name="qlistcomp"),
 }
 
 vim_mapping = {
-    "import": Function(invoke_snippet, template_name="qimportmod"),
-    "import as": Function(invoke_live_template, template_name="qimportas"),
-    "from import": Function(invoke_live_template, template_name="qfromimport"),
-    "class": Function(invoke_live_template, template_name="qclass"),
-    "method": Function(invoke_live_template, template_name="qmethod"),
-    "private method": Function(invoke_live_template, template_name="qprivatemethod"),
-    "dock string": Function(invoke_live_template, template_name="qdocstring"),
+    "import": Function(invoke_neosnippets, template_name="qimportmod"),
+    "import as": Function(invoke_neosnippets, template_name="qimportas"),
+    "from import": Function(invoke_neosnippets, template_name="qfromimport"),
+    "class": Function(invoke_neosnippets, template_name="qclass"),
+    "method": Function(invoke_neosnippets, template_name="qmethod"),
+    "private method": Function(invoke_neosnippets, template_name="qprivatemethod"),
+    "dock string": Function(invoke_neosnippets, template_name="qdocstring"),
     "if": Function(invoke_neosnippets, template_name="qif"),
-    "ell if": Function(invoke_live_template, template_name="qelif"),
-    "else": Function(invoke_live_template, template_name="qelse"),
-    "try": Function(invoke_live_template, template_name="qtry"),
-    "(except | catch)": Function(invoke_live_template, template_name="qcatch"),
-    "except as": Function(invoke_live_template, template_name="qexceptas"),
-    "finally": Function(invoke_live_template, template_name="qfinally"),
-    "for loop": Function(invoke_live_template, template_name="qfor"),
-    "while": Function(invoke_live_template, template_name="qwhile"),
-    "with": Function(invoke_live_template, template_name="qwith"),
-    "with open": Function(invoke_live_template, template_name="qopenwith"),
-    "format string": Function(invoke_live_template, template_name="qfstring"),
-    "list comprehension": Function(invoke_live_template, template_name="qlistcomp"),
-    # # IntelliJ Actions
-    "fix imports": Function(run_action, action_name="Organize Imports"),
+    "ell if": Function(invoke_neosnippets, template_name="qelif"),
+    "else": Function(invoke_neosnippets, template_name="qelse"),
+    "try": Function(invoke_neosnippets, template_name="qtry"),
+    "(except | catch)": Function(invoke_neosnippets, template_name="qcatch"),
+    "except as": Function(invoke_neosnippets, template_name="qexceptas"),
+    "finally": Function(invoke_neosnippets, template_name="qfinally"),
+    "for loop": Function(invoke_neosnippets, template_name="qfor"),
+    "while": Function(invoke_neosnippets, template_name="qwhile"),
+    "with": Function(invoke_neosnippets, template_name="qwith"),
+    "with open": Function(invoke_neosnippets, template_name="qopenwith"),
+    "format string": Function(invoke_neosnippets, template_name="qfstring"),
+    "list comprehension": Function(invoke_neosnippets, template_name="qlistcomp"),
 }
 
 extras = []
@@ -137,8 +133,8 @@ Breathe.add_commands(
     context=context & vscode_context, mapping=vscode_mapping, extras=extras
 )
 
-# Vim-specific mappings
-Breathe.add_commands(
-    context=context & vim_context, mapping=vim_mapping, extras=extras
-)
+# # Vim-specific mappings
+# Breathe.add_commands(
+#     context=context & vim_context, mapping=vim_mapping, extras=extras
+# )
 

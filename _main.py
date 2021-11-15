@@ -13,6 +13,8 @@ modules = {
             "intellij",
             "mac_speech",
             "music",
+            "nvim",
+            "obsidian",
             "outlook",
             "terminal",
             "vscode",
