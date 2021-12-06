@@ -62,6 +62,7 @@ extras = [
             "power point": "Microsoft PowerPoint",
             "word": "Microsoft Word",
             "firefox": "Firefox",
+            "insomnia": "Insomnia",
         },
     )
 ]

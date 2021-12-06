@@ -57,6 +57,9 @@ mapping = {
     "git stash": Text("git stash") + Key("enter"),
     "git stash list": Text("git stash list") + Key("enter"),
     "git tag": Text("git tag "),
+    "docker images": Text("docker images") + Key("enter"),
+    "docker pee ess": Text("docker ps") + Key("enter"),
+    "ranger": Text("ranger") + Key("enter"),
 }
 extras = []
 iterm_context = AppContext(executable="iTerm2")

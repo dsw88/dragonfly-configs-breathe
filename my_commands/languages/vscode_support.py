@@ -10,5 +10,5 @@ def run_vscode_action(command):
 
 def invoke_snippet(template_name):
     Text(template_name).execute()
-    Pause("5").execute()
+    Pause("20").execute()
     Key("enter").execute()
