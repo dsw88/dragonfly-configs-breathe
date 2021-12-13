@@ -63,6 +63,7 @@ extras = [
             "word": "Microsoft Word",
             "firefox": "Firefox",
             "insomnia": "Insomnia",
+            "spotify": "Spotify",
         },
     )
 ]
