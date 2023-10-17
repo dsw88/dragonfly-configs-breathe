@@ -42,6 +42,8 @@ mapping = {
     "vim save": Text(":w") + Key("enter"),
     "vim quit": Text(":wq") + Key("enter"),
     "punch": Key("w-right,comma,enter"),
+    "great": Key("space,s"),
+    "nerd": Key("space,t"),
 }
 extras = [Dictation("paletteaction")]
 

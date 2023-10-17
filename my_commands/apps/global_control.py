@@ -27,11 +27,11 @@ mapping = {
     "window last": Key("ws-backtick"),
     "window close": Key("w-w"),
     "swap": Key("w-tab"),
-    "desktop next": Key("ctrl:down/50")
+    "desktop next": Key("caw-right")
     + Key("right/50")
     + Key("ctrl:up"),  # TODO - Broken
     "desktop last": Key("c-left"),  # TODO - Broken
-    "mission control": Key("ctrl:down/50")
+    "mission control": Key("caw-left")
     + Key("up/50")
     + Key("ctrl:up"),  # TODO - Broken
     # Global control

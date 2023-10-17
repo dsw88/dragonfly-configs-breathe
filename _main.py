@@ -26,6 +26,7 @@ modules = {
         "languages": [
             "python",
             "terraform",
+            "go",
         ],
     }
 }
